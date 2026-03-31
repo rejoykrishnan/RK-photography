@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-serif: "Playfair Display", serif;
+  --font-custom: "adobe-garamond-pro", "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black antialiased overflow-x-hidden cursor-none;
+  }
+  
+  a, button, [role="button"], .cursor-pointer {
+    cursor: none !important;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
